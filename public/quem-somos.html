@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos - Comuna Esportes</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: #0b0c10; color: #ffffff; min-height: 100vh; display: flex; flex-direction: column; }
+        
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background-color: #0b0c10; border-bottom: 1px solid #1e2230; }
+        .logo { font-size: 1.3rem; font-weight: 900; background: linear-gradient(45deg, #a855f7, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; text-decoration: none; }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a.active { color: #ffffff; }
+        .btn-contribua { background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); color: #ffffff; padding: 10px 24px; border-radius: 20px; border: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; cursor: pointer; }
+
+        main { max-width: 1000px; margin: 60px auto; padding: 0 20px; flex: 1; }
+        .page-title { font-size: 2.8rem; font-weight: 900; text-transform: uppercase; margin-bottom: 20px; text-align: center; }
+        .subtitle { color: #00b4d8; text-align: center; font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; }
+        
+        .about-section { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; align-items: center; }
+        .about-text p { color: #94a3b8; line-height: 1.7; margin-bottom: 20px; font-size: 1.05rem; }
+        .about-visual { background: linear-gradient(135deg, #12141c 0%, #1e2230 100%); border: 1px solid #2d334a; border-radius: 16px; padding: 40px; text-align: center; }
+        .about-visual i { font-size: 4rem; color: #a855f7; margin-bottom: 20px; }
+
+        .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .pillar-card { background-color: #12141c; border: 1px solid #1e2230; padding: 30px; border-radius: 12px; }
+        .pillar-card i { font-size: 1.8rem; color: #00b4d8; margin-bottom: 15px; }
+        .pillar-card h3 { font-size: 1.1rem; text-transform: uppercase; margin-bottom: 10px; }
+        .pillar-card p { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; }
+
+        @media (max-width: 768px) { .about-section { grid-template-columns: 1fr; } .pillars-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+    <a href="index.html" class="logo">Comuna Esportes</a>
+    <nav class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="quem-somos.html" class="active">Quem Somos</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="contato.html">Contato</a>
+        <button class="btn-contribua">Contribua</button>
+    </nav>
+</header>
+
+
+    <main>
+        <h1 class="page-title">Nossa História</h1>
+        <p class="subtitle">União, Saúde e Cultura na Periferia</p>
+
+        <div class="about-section">
+            <div class="about-text">
+                <p>O <strong>Comuna Esportes</strong> nasceu do desejo de mapear, conectar e fortalecer as iniciativas esportivas autônomas que acontecem diariamente nas comunidades periféricas.</p>
+                <p>Acreditamos que o acesso ao esporte e ao lazer é um direito fundamental capaz de transformar realidades coletivas, gerar saúde preventiva e fomentar manifestações culturais vibrantes.</p>
+            </div>
+            <div class="about-visual">
+                <i class="fas fa-bullhorn"></i>
+                <h2>Voz à Periferia</h2>
+            </div>
+        </div>
+
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Saúde</h3>
+                <p>Promover o bem-estar físico e mental através da prática regular de exercícios físicos acessíveis.</p>
+            </div>
+            <div class="pillar-card">
+                <i class="fas fa-users-cog"></i>
+                <h3>União</h3>
+                <p>Aproximar atletas amadores, organizadores de times e apoiadores locais em uma única rede integrada.</p>
+            </div>
+            <div class="pillar-card">
+                <i class="fas fa-theater-masks"></i>
+                <h3>Cultura</h3>
+                <p>Valorizar a identidade periférica mesclando esporte com música, dança e vivências.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

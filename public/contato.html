@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Comuna Esportes</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: #0b0c10; color: #ffffff; min-height: 100vh; display: flex; flex-direction: column; }
+        
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background-color: #0b0c10; border-bottom: 1px solid #1e2230; }
+        .logo { font-size: 1.3rem; font-weight: 900; background: linear-gradient(45deg, #a855f7, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; text-decoration: none; }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a.active { color: #ffffff; }
+        .btn-contribua { background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); color: #ffffff; padding: 10px 24px; border-radius: 20px; border: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; cursor: pointer; }
+
+        .contact-container { max-width: 1100px; width: 100%; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; flex: 1; }
+        
+        .contact-form-section h1 { font-size: 2.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 25px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; color: #94a3b8; margin-bottom: 8px; }
+        .form-group input, .form-group textarea { width: 100%; background-color: #12141c; border: 1px solid #1e2230; padding: 14px; border-radius: 8px; color: #ffffff; font-size: 0.95rem; }
+        .form-group input:focus, .form-group textarea:focus { border-color: #00b4d8; outline: none; }
+        .btn-submit { background-color: #00b4d8; color: #000000; padding: 14px 30px; border-radius: 8px; border: none; font-size: 0.9rem; font-weight: 800; text-transform: uppercase; cursor: pointer; width: 100%; transition: background-color 0.2s; }
+        .btn-submit:hover { background-color: #0096c7; }
+
+        .contact-info { display: flex; flex-direction: column; gap: 30px; justify-content: center; }
+        .info-item { display: flex; align-items: flex-start; gap: 15px; }
+        .info-item i { font-size: 1.3rem; color: #a855f7; padding-top: 3px; }
+        .info-item h4 { font-size: 0.9rem; text-transform: uppercase; color: #ffffff; margin-bottom: 4px; }
+        .info-item p { color: #94a3b8; font-size: 0.95rem; }
+
+        /* Rodapé com Mapa da Imagem */
+        footer { background-color: #07080c; border-top: 1px solid #1e2230; padding: 30px 60px; display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+        .footer-nav { display: flex; gap: 24px; }
+        .footer-nav a { color: #94a3b8; text-decoration: none; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+        
+        .map-box { width: 220px; height: 110px; border-radius: 8px; overflow: hidden; border: 1px solid #2d334a; }
+        .map-box iframe { width: 100%; height: 100%; border: 0; filter: grayscale(1) invert(0.95) contrast(1.2); }
+
+        @media (max-width: 768px) { .contact-container { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 20px; text-align: center; } }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+    <a href="index.html" class="logo">Comuna Esportes</a>
+    <nav class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="quem-somos.html">Quem Somos</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="contato.html" class="active">Contato</a>
+        <button class="btn-contribua">Contribua</button>
+    </nav>
+</header>
+
+
+    <div class="contact-container">
+        <section class="contact-form-section">
+            <h1>Fale Conosco</h1>
+            <form onsubmit="alert('Mensagem enviada com sucesso!'); return false;">
+                <div class="form-group">
+                    <label>Seu Nome</label>
+                    <input type="text" placeholder="Ex: João Silva" required>
+                </div>
+                <div class="form-group">
+                    <label>E-mail de Contato</label>
+                    <input type="email" placeholder="Ex: contato@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Mensagem</label>
+                    <textarea rows="5" placeholder="Escreva aqui..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+        </section>
+
+        <aside class="contact-info">
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h4>Sede Organizadora</h4>
+                    <p>Zonas Periféricas Integradas<br>São Paulo - SP</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h4>E-mail</h4>
+                    <p>contato@comunaesportes.org</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="quem-somos.html">Quem Somos</a>
+            <a href="#">Serviços</a>
+            <a href="contato.html">Contato</a>
+        </div>
+        <div class="map-box">
+            <iframe src="https://google.com" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
+</body>
+</html>
